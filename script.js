@@ -12,6 +12,22 @@
     try { localStorage.setItem(KEY, m); } catch (e) {}
     apply(m);
   });
+  var items = document.querySelectorAll('.reveal');
+  function show(el) { el.classList.add('seen'); }
+  // Everything at or above the bottom of the window shows, so a fast scroll or an anchor jump never leaves a section blank.
+  function sweep() {
+    items.forEach(function (el) { if (el.getBoundingClientRect().top < window.innerHeight * 0.95) show(el); });
+  }
+  if ('IntersectionObserver' in window) {
+    var watcher = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); watcher.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { watcher.observe(el); });
+  }
+  window.addEventListener('scroll', sweep, { passive: true });
+  window.addEventListener('resize', sweep);
+  window.addEventListener('load', sweep);
+  sweep();
   var copy = document.getElementById('copy-btn'), code = document.getElementById('hash-cmd');
   if (copy && code) copy.addEventListener('click', function () {
     var done = function () { copy.textContent = 'Copied'; setTimeout(function () { copy.textContent = 'Copy'; }, 1800); };

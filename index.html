@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Remindr - calm, private reminders for Windows</title>
-<meta name="description" content="Remindr is a calm, private reminder app for Windows. Profiles for the whole family, month/week/agenda views, no account, no cloud.">
+<meta name="description" content="Remindr is a calm, private reminder app for Windows, with notifications, profiles for the whole family and 176 languages. No account, no cloud.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Remindr - calm, private reminders for Windows">
 <meta property="og:description" content="Calm, private reminders for you and your family. Everything stays on your PC.">
@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://randomstufteam.github.io/assets/screenshots/month-light.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%238B5CF6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M9 17l5 5 9-11' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<script>try{var t=localStorage.getItem('remindr-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('remindr-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,99 +27,77 @@
 </div></header>
 <main id="main" class="wrap">
   <section id="top" class="hero">
-    <div class="card">
-      <img src="assets/screenshots/hero.svg" width="1280" height="400" alt="Remindr: calm, private reminders for you and your family">
-      <h1>Calm, private reminders for you and your family</h1>
-      <p>A reminders and calendar app for Windows, built for the whole family. Everyone gets their own profile, reminders get a picture, it speaks 32 languages, and your data never leaves your PC.</p>
-      <p><a class="btn" href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe">Download for Windows</a></p>
-      <p class="muted">v0.3.1 &middot; Windows 10 (2004+) and 11 &middot; ~94 MB</p>
-      <p class="muted">What's new in 0.3.1: faster start-up, lower memory.</p>
-    </div>
+    <p class="eyebrow">New in v0.4.0: notifications, tray and 176 languages</p>
+    <h1>Calm, private reminders for you and your family</h1>
+    <p class="lead">Everyone gets their own profile, reminders get a picture, and your data never leaves your PC.</p>
+    <p><a class="btn" href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe">Download for Windows</a></p>
+    <p class="muted small">v0.4.0 &middot; Windows 10 (2004+) and 11 &middot; 97 MB</p>
+    <a class="shot" href="assets/screenshots/month-light.png"><img src="assets/screenshots/month-light.png" width="1280" height="800" alt="Remindr's month view with category dots and the day panel"></a>
   </section>
 
   <section id="features">
-    <h2>What it does</h2>
+    <h2 class="reveal">What it does</h2>
     <div class="grid">
-      <div class="card"><h3><span class="dot"></span>A profile for everyone</h3><p class="muted">Each person picks a name, a color and one of 176 pictures, and can lock their profile with a 4-digit PIN.</p></div>
-      <div class="card"><h3><span class="dot"></span>Month, Week and Agenda</h3><p class="muted">Colored dots show what's on each day. Click a day to see it, or double-click to add a reminder.</p></div>
-      <div class="card"><h3><span class="dot"></span>Reminders with pictures</h3><p class="muted">120 pictures across School, Work, Health, Home, Food, Money, Travel, Celebrations and Sports.</p></div>
-      <div class="card"><h3><span class="dot"></span>Important badge</h3><p class="muted">Important reminders stand out with a red badge.</p></div>
-      <div class="card"><h3><span class="dot"></span>A warm welcome</h3><p class="muted">The first launch greets you in many languages, then sets you up in five short steps.</p></div>
-      <div class="card"><h3><span class="dot"></span>32 languages</h3><p class="muted">Switched live without a restart, with full right-to-left layout for Arabic and Hebrew.</p></div>
-      <div class="card"><h3><span class="dot"></span>Light, Dark or System</h3><p class="muted">Remind UI's frosted glass and slowly drifting colors, in the theme you choose.</p></div>
-      <div class="card"><h3><span class="dot"></span>Stays up to date</h3><p class="muted">Checks GitHub for new releases at startup and verifies every download before installing it.</p></div>
-      <div class="card"><h3><span class="dot"></span>Report a bug</h3><p class="muted">Straight from Settings &gt; Help &amp; feedback.</p></div>
+      <div class="card reveal"><h3><span class="dot"></span>Reminders that find you</h3><p class="muted">Windows notifications with Complete, Snooze and Dismiss buttons.</p></div>
+      <div class="card reveal"><h3><span class="dot"></span>Important means it nags</h3><p class="muted">Alerts a day and an hour ahead, then every 10 minutes until you act.</p></div>
+      <div class="card reveal"><h3><span class="dot"></span>Runs quietly in the tray</h3><p class="muted">Close the window and alerts still arrive. It can start with Windows too.</p></div>
+      <div class="card reveal"><h3><span class="dot"></span>A profile for everyone</h3><p class="muted">A name, a color, a picture and an optional 4-digit PIN.</p></div>
+      <div class="card reveal"><h3><span class="dot"></span>Month, Week and Agenda</h3><p class="muted">Colored dots show each day, and 120 pictures label your reminders.</p></div>
+      <div class="card reveal"><h3><span class="dot"></span>176 languages</h3><p class="muted">Switched live. Many are machine-translated and may be rough. <a href="https://github.com/Randomstufteam/Remindr/blob/main/docs/TRANSLATING.md">Help translate</a>.</p></div>
     </div>
   </section>
 
+  <section id="remind-ui" class="band reveal">
+    <h2>Remind UI 0.4</h2>
+    <p class="muted">Frosted glass, smoother motion, and a What's New tour of each release. With Windows animations off, everything stays still.</p>
+  </section>
+
   <section id="gallery">
-    <h2>Screenshots</h2>
+    <h2 class="reveal">Screenshots</h2>
     <div class="gallery">
-      <figure class="card"><a href="assets/screenshots/month-light.png"><img src="assets/screenshots/month-light.png" width="1280" height="800" alt="Month view with category dots and the day panel"></a><figcaption>Month view, light theme.</figcaption></figure>
-      <figure class="card"><a href="assets/screenshots/all-reminders-dark.png"><img src="assets/screenshots/all-reminders-dark.png" width="1280" height="800" alt="All Reminders in dark mode, with pictures and Important badges" loading="lazy"></a><figcaption>All reminders, dark theme.</figcaption></figure>
-      <figure class="card"><a href="assets/screenshots/edit-picture.png"><img src="assets/screenshots/edit-picture.png" width="1280" height="800" alt="Editing a reminder and choosing a picture" loading="lazy"></a><figcaption>Pick a picture for a reminder.</figcaption></figure>
-      <figure class="card"><a href="assets/screenshots/installer.png"><img src="assets/screenshots/installer.png" width="720" height="460" alt="The animated Remindr installer" loading="lazy"></a><figcaption>The installer.</figcaption></figure>
+      <figure class="reveal"><a href="assets/screenshots/all-reminders-dark.png"><img src="assets/screenshots/all-reminders-dark.png" width="1280" height="800" alt="All Reminders in dark mode, with pictures and Important badges" loading="lazy"></a><figcaption>All reminders, dark theme.</figcaption></figure>
+      <figure class="reveal"><a href="assets/screenshots/edit-picture.png"><img src="assets/screenshots/edit-picture.png" width="1280" height="800" alt="Editing a reminder and choosing a picture" loading="lazy"></a><figcaption>Pick a picture for a reminder.</figcaption></figure>
     </div>
   </section>
 
   <section id="install">
-    <div class="card">
+    <div class="card reveal">
       <h2>Install</h2>
       <ol>
         <li>Download <a href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe">Remindr-Installer.exe</a>.</li>
-        <li>Run it and follow the installer. It installs just for your Windows account, so no admin prompt is needed.</li>
+        <li>Run it. No admin prompt and no separate .NET install needed.</li>
         <li>Launch Remindr from the Start menu.</li>
       </ol>
-      <div class="warn" role="note"><strong>SmartScreen warning.</strong> Windows may show "Windows protected your PC". Choose <em>More info</em>, then <em>Run anyway</em>. This happens because Remindr is not code-signed yet.</div>
-      <h3>Verify your download (optional)</h3>
-      <p class="muted">Compare the result with <a href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe.sha256">Remindr-Installer.exe.sha256</a> on the latest release.</p>
-      <div class="cmd"><pre><code id="hash-cmd">Get-FileHash .\Remindr-Installer.exe -Algorithm SHA256</code></pre><button type="button" id="copy-btn" class="pill" aria-live="polite">Copy</button></div>
-      <p class="muted" style="margin-top:12px">Uninstall from Settings &gt; Apps &gt; Installed apps. Your reminders are kept unless you tick <em>Also remove my data</em>, and even then they go to the Recycle Bin.</p>
+      <div class="warn" role="note"><strong>SmartScreen warning.</strong> Windows may show "Windows protected your PC" because Remindr isn't code-signed yet. Choose <em>More info</em>, then <em>Run anyway</em>.</div>
+      <details>
+        <summary>Verify your download</summary>
+        <p class="muted">Compare the result with <a href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe.sha256">Remindr-Installer.exe.sha256</a>.</p>
+        <div class="cmd"><pre><code id="hash-cmd">Get-FileHash .\Remindr-Installer.exe -Algorithm SHA256</code></pre><button type="button" id="copy-btn" class="pill" aria-live="polite">Copy</button></div>
+      </details>
     </div>
   </section>
 
   <section id="privacy">
-    <div class="card">
-      <h2>Privacy</h2>
+    <div class="card reveal">
+      <h2>Private by design</h2>
       <ul>
-        <li>Your data lives locally in <code>%AppData%\Remindr</code>.</li>
-        <li>No account, no cloud, no tracking.</li>
-        <li>The only network request is the optional update check, which asks GitHub's public API for the latest version number and sends nothing about you. You can turn it off in Settings.</li>
-        <li>Profile PINs are hashed (PBKDF2). A 4-digit PIN is a privacy screen for family members, not strong security.</li>
+        <li>No account, no cloud, no tracking. Your data stays in <code>%AppData%\Remindr</code>.</li>
+        <li>The only network request is the optional update check, which sends nothing about you.</li>
+        <li>A 4-digit PIN is a privacy screen for family members, not strong security.</li>
       </ul>
     </div>
   </section>
 
-  <section id="requirements">
-    <div class="card">
-      <h2>System requirements</h2>
-      <ul>
-        <li>Windows 10 (version 2004 or later) or Windows 11, 64-bit</li>
-        <li>About 94 MB download</li>
-        <li>No separate .NET install needed</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="next">
-    <div class="card">
-      <h2>Coming next</h2>
-      <ul>
-        <li>Notifications, with snooze</li>
-        <li>Tray icon</li>
-        <li>Start with Windows</li>
-        <li>Recurring reminders</li>
-        <li>Search</li>
-        <li>Offline AI assistant</li>
-      </ul>
-    </div>
+  <section id="next" class="band reveal">
+    <h2>Coming next</h2>
+    <p class="muted">Recurring reminders, quick add, search and an optional offline AI assistant.</p>
   </section>
 </main>
 <footer><div class="wrap">
   <a href="https://github.com/Randomstufteam/Remindr">GitHub</a>
   <a href="https://github.com/Randomstufteam/Remindr/issues">Issues</a>
   <a href="https://github.com/Randomstufteam/Remindr/blob/main/LICENSE">MIT License</a>
-  <p class="muted" style="margin-top:12px">Profile and reminder pictures are <a href="https://github.com/microsoft/fluentui-emoji">Microsoft Fluent UI Emoji</a> (MIT). See the <a href="https://github.com/Randomstufteam/Remindr/blob/main/THIRD-PARTY-NOTICES.md">third-party notices</a>.</p>
+  <p class="muted small">Pictures are <a href="https://github.com/microsoft/fluentui-emoji">Microsoft Fluent UI Emoji</a> (MIT). See the <a href="https://github.com/Randomstufteam/Remindr/blob/main/THIRD-PARTY-NOTICES.md">third-party notices</a>.</p>
 </div></footer>
 <script src="script.js"></script>
 </body>
