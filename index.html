@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Remindr - calm, private reminders for Windows</title>
-<meta name="description" content="Remindr is a calm, private reminder app for Windows, with notifications, profiles for the whole family and 176 languages. No account, no cloud.">
+<meta name="description" content="Remindr is a free, private reminder app for Windows with a Today page, a daily summary and an offline AI assistant. No account, no cloud, 176 languages.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Remindr - calm, private reminders for Windows">
-<meta property="og:description" content="Calm, private reminders for you and your family. Everything stays on your PC.">
+<meta property="og:description" content="Reminders that find you. Data that never leaves your PC.">
 <meta property="og:url" content="https://randomstufteam.github.io/">
 <meta property="og:image" content="https://randomstufteam.github.io/assets/screenshots/month-light.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,87 +17,165 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div></div>
 <header class="site"><div class="wrap">
-  <a class="brand" href="#top">Remindr</a>
+  <a class="brand" href="#top"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Remindr</a>
   <nav aria-label="Main">
-    <a href="#features">Features</a><a href="#gallery">Screenshots</a><a href="#install">Install</a><a href="#privacy">Privacy</a>
-    <button type="button" id="theme-toggle" class="pill">Theme: System</button>
+    <a href="#new">What's new</a><a href="#assistant">AI assistant</a><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#install">Install</a>
   </nav>
+  <button type="button" id="theme-toggle" class="pill">Theme: System</button>
+  <a class="btn btn-sm" href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe">Download</a>
 </div></header>
-<main id="main" class="wrap">
-  <section id="top" class="hero">
-    <p class="eyebrow">New in v0.4.0: notifications, tray and 176 languages</p>
-    <h1>Calm, private reminders for you and your family</h1>
-    <p class="lead">Everyone gets their own profile, reminders get a picture, and your data never leaves your PC.</p>
-    <p><a class="btn" href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe">Download for Windows</a></p>
-    <p class="muted small">v0.4.0 &middot; Windows 10 (2004+) and 11 &middot; 97 MB</p>
-    <a class="shot" href="assets/screenshots/month-light.png"><img src="assets/screenshots/month-light.png" width="1280" height="800" alt="Remindr's month view with category dots and the day panel"></a>
+
+<main id="main">
+  <section id="top" class="wrap hero">
+    <div class="hero-copy">
+      <a class="badge" href="#new"><span class="tag">v0.5.0</span>Today page, daily summary and an offline AI assistant</a>
+      <h1>Reminders that find you. Data that never leaves your PC.</h1>
+      <p class="lead">Remindr is a free, calm reminder app for Windows, for you and the people you share a PC with. No account, no cloud, no tracking.</p>
+      <div class="actions">
+        <a class="btn" href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Download for Windows</a>
+        <a class="btn btn-ghost" href="#new">See what's new</a>
+      </div>
+      <p class="muted small">v0.5.0 &middot; Windows 10 (2004+) and 11 &middot; about 210 MB &middot; Free and open source (MIT)</p>
+    </div>
+    <a class="hero-shot" href="assets/screenshots/month-light.png"><img class="float" src="assets/screenshots/month-light.png" width="1280" height="800" alt="Remindr's month view in the light theme, with colored dots on days that have reminders"></a>
   </section>
 
-  <section id="features">
-    <h2 class="reveal">What it does</h2>
+  <section class="strip" aria-label="At a glance">
+    <ul class="wrap">
+      <li class="reveal">No account</li><li class="reveal">No cloud, no tracking</li><li class="reveal">No admin prompt to install</li><li class="reveal">176 languages</li><li class="reveal">Open source, MIT</li>
+    </ul>
+  </section>
+
+  <section id="new" class="wrap section">
+    <div class="head reveal">
+      <p class="eyebrow">New in v0.5.0 &middot; November 6, 2026</p>
+      <h2>Start every day knowing what's on it.</h2>
+      <p class="lead">A new Today page, one gentle summary a day, and an assistant you can just talk to, all running on your own PC.</p>
+    </div>
+    <div class="split">
+      <div class="today card reveal" role="img" aria-label="Illustration of the Today page: a one-line summary, filter chips, and Overdue, Today and Next 7 days sections">
+        <p class="today-title">Today</p>
+        <p class="muted">1 overdue, 3 today and 1 important this week.</p>
+        <div class="chips"><span class="on">All</span><span>Overdue</span><span>Today</span><span>Next 7 days</span><span>Important</span></div>
+        <p class="group danger">Overdue</p>
+        <div class="row late reveal"><i style="background:#D13438"></i><span>Return library books</span><small>Yesterday</small></div>
+        <p class="group">Today</p>
+        <div class="row reveal"><i style="background:#2563EB"></i><span>Dentist</span><small>10:30</small></div>
+        <div class="row reveal"><i style="background:#10B981"></i><span>Pick up groceries</span><small>17:00</small></div>
+        <div class="row reveal"><i style="background:#8B5CF6"></i><span>Call Grandma</span><small>19:00</small></div>
+        <p class="group">Next 7 days</p>
+        <div class="row reveal"><i style="background:#D13438"></i><span>Pay rent <b class="imp">IMPORTANT</b></span><small>Friday</small></div>
+      </div>
+      <div class="stack">
+        <div class="card lift reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><h3>Today page</h3><p class="muted">A one-line summary of your day, then Overdue, Today, Next 7 days and Important, with filter chips to narrow it down.</p></div>
+        <div class="card lift reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Daily summary</h3><p class="muted">One notification a day with what's coming up. Turn it on and pick the time in Settings.</p></div>
+        <div class="card lift reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg><h3>AI assistant <span class="tag">Preview</span></h3><p class="muted">Type or talk to add and find reminders. Fully offline. <a href="#assistant">How it works</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="assistant" class="wrap section">
+    <div class="dark-panel reveal">
+      <div class="dark-copy">
+        <p class="eyebrow"><span class="orb" aria-hidden="true"></span>AI assistant &middot; Preview</p>
+        <h2>Talk to your reminders. Nothing leaves your PC.</h2>
+        <p class="lead">Turn it on in Settings &rsaquo; AI assistant and download a model (about 0.7 GB for the recommended one). Every change shows a confirm card before anything is saved.</p>
+        <ul class="facts">
+          <li><strong>Work and Chat modes</strong>Work handles reminders; Chat answers general questions.</li>
+          <li><strong>Voice</strong>Hold Ctrl+Space or click the orb, and hear replies in a natural voice.</li>
+          <li><strong>Runs on your graphics card</strong>Uses a dedicated GPU when you have one, with a CPU fallback.</li>
+          <li><strong>Downloads only when you ask</strong>Models come from Hugging Face and GitHub; each file is checked before use.</li>
+        </ul>
+        <p class="small dim">The assistant replies in English only for now.</p>
+      </div>
+      <div class="chat reveal" role="img" aria-label="Example: the user types a reminder request and the assistant shows a confirm card">
+        <div class="me">remind me to call mom friday at 6, it's important</div>
+        <div class="confirm">
+          <p class="dim small">Add this reminder?</p>
+          <p class="c-title">Call mom</p>
+          <p class="small">Friday &middot; 18:00 &middot; <b class="imp-dark">Important</b></p>
+          <div class="c-actions"><span class="c-yes">Add</span><span class="c-no">Cancel</span></div>
+        </div>
+        <div class="me">what's on tomorrow?</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="wrap section">
+    <div class="head reveal">
+      <h2>Everything a reminder app should just do.</h2>
+      <p class="lead">The basics, done carefully.</p>
+    </div>
     <div class="grid">
-      <div class="card reveal"><h3><span class="dot"></span>Reminders that find you</h3><p class="muted">Windows notifications with Complete, Snooze and Dismiss buttons.</p></div>
-      <div class="card reveal"><h3><span class="dot"></span>Important means it nags</h3><p class="muted">Alerts a day and an hour ahead, then every 10 minutes until you act.</p></div>
-      <div class="card reveal"><h3><span class="dot"></span>Runs quietly in the tray</h3><p class="muted">Close the window and alerts still arrive. It can start with Windows too.</p></div>
-      <div class="card reveal"><h3><span class="dot"></span>A profile for everyone</h3><p class="muted">A name, a color, a picture and an optional 4-digit PIN.</p></div>
-      <div class="card reveal"><h3><span class="dot"></span>Month, Week and Agenda</h3><p class="muted">Colored dots show each day, and 120 pictures label your reminders.</p></div>
-      <div class="card reveal"><h3><span class="dot"></span>176 languages</h3><p class="muted">Switched live. Many are machine-translated and may be rough. <a href="https://github.com/Randomstufteam/Remindr/blob/main/docs/TRANSLATING.md">Help translate</a>.</p></div>
+      <div class="card lift reveal"><h3>Notifications that find you</h3><p class="muted">Windows notifications with Complete, Snooze and Dismiss right on them.</p></div>
+      <div class="card lift reveal"><h3>Important means important</h3><p class="muted">A heads-up a day and an hour ahead, then every 10 minutes until you act.</p></div>
+      <div class="card lift reveal"><h3>Lives in the tray</h3><p class="muted">Close the window and alerts keep coming. Optionally starts with Windows.</p></div>
+      <div class="card lift reveal"><h3>A profile for everyone</h3><p class="muted">Each person gets a name, color, picture and an optional 4-digit PIN.</p></div>
+      <div class="card lift reveal"><h3>Month, Week, Agenda and Today</h3><p class="muted">Colored day dots and 120 picture labels make a busy week easy to scan.</p></div>
+      <div class="card lift reveal"><h3>176 languages</h3><p class="muted">Switch live, no restart. Many are machine-translated. <a href="https://github.com/Randomstufteam/Remindr/blob/main/docs/TRANSLATING.md">Help improve yours</a>.</p></div>
     </div>
   </section>
 
-  <section id="remind-ui" class="band reveal">
-    <h2>Remind UI 0.4</h2>
-    <p class="muted">Frosted glass, smoother motion, and a What's New tour of each release. With Windows animations off, everything stays still.</p>
-  </section>
-
-  <section id="gallery">
-    <h2 class="reveal">Screenshots</h2>
+  <section id="gallery" class="wrap section-tight" aria-label="Screenshots">
     <div class="gallery">
-      <figure class="reveal"><a href="assets/screenshots/all-reminders-dark.png"><img src="assets/screenshots/all-reminders-dark.png" width="1280" height="800" alt="All Reminders in dark mode, with pictures and Important badges" loading="lazy"></a><figcaption>All reminders, dark theme.</figcaption></figure>
-      <figure class="reveal"><a href="assets/screenshots/edit-picture.png"><img src="assets/screenshots/edit-picture.png" width="1280" height="800" alt="Editing a reminder and choosing a picture" loading="lazy"></a><figcaption>Pick a picture for a reminder.</figcaption></figure>
+      <figure class="shot reveal"><a href="assets/screenshots/all-reminders-dark.png"><img src="assets/screenshots/all-reminders-dark.png" width="1280" height="800" alt="All Reminders in dark mode, with pictures and Important badges" loading="lazy"></a><figcaption>All Reminders, dark theme</figcaption></figure>
+      <figure class="shot reveal"><a href="assets/screenshots/edit-picture.png"><img src="assets/screenshots/edit-picture.png" width="1280" height="800" alt="Editing a reminder and choosing a picture" loading="lazy"></a><figcaption>Pick a picture for any reminder</figcaption></figure>
+      <figure class="shot reveal"><a href="assets/screenshots/month-light.png"><img src="assets/screenshots/month-light.png" width="1280" height="800" alt="Month view in the light theme" loading="lazy"></a><figcaption>Month view, light theme</figcaption></figure>
     </div>
   </section>
 
-  <section id="install">
-    <div class="card reveal">
-      <h2>Install</h2>
-      <ol>
-        <li>Download <a href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe">Remindr-Installer.exe</a>.</li>
-        <li>Run it. No admin prompt and no separate .NET install needed.</li>
-        <li>Launch Remindr from the Start menu.</li>
-      </ol>
-      <div class="warn" role="note"><strong>SmartScreen warning.</strong> Windows may show "Windows protected your PC" because Remindr isn't code-signed yet. Choose <em>More info</em>, then <em>Run anyway</em>.</div>
-      <details>
-        <summary>Verify your download</summary>
-        <p class="muted">Compare the result with <a href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe.sha256">Remindr-Installer.exe.sha256</a>.</p>
-        <div class="cmd"><pre><code id="hash-cmd">Get-FileHash .\Remindr-Installer.exe -Algorithm SHA256</code></pre><button type="button" id="copy-btn" class="pill" aria-live="polite">Copy</button></div>
-      </details>
+  <section id="privacy" class="band">
+    <div class="wrap privacy">
+      <div class="head reveal">
+        <h2>Private by design, not by policy.</h2>
+        <p class="lead">There is no server to trust. Your reminders live in a folder on your PC.</p>
+      </div>
+      <div class="points">
+        <div class="reveal"><h3>Stays on your PC</h3><p class="muted">No account, no cloud, no tracking. Data lives in <code>%AppData%\Remindr</code>, the assistant included.</p></div>
+        <div class="reveal"><h3>One optional request</h3><p class="muted">The update check sends nothing personal. Model downloads happen only when you ask.</p></div>
+        <div class="reveal"><h3>Honest about the PIN</h3><p class="muted">It's a privacy screen between family members, not strong security.</p></div>
+      </div>
     </div>
   </section>
 
-  <section id="privacy">
-    <div class="card reveal">
-      <h2>Private by design</h2>
-      <ul>
-        <li>No account, no cloud, no tracking. Your data stays in <code>%AppData%\Remindr</code>.</li>
-        <li>The only network request is the optional update check, which sends nothing about you.</li>
-        <li>A 4-digit PIN is a privacy screen for family members, not strong security.</li>
-      </ul>
+  <section id="install" class="wrap section">
+    <div class="head-row">
+      <div class="head reveal">
+        <h2>Installed in under a minute.</h2>
+        <p class="lead">No admin prompt and no separate .NET install.</p>
+      </div>
+      <a class="btn" href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe">Download v0.5.0 &middot; 210 MB</a>
     </div>
+    <ol class="grid steps">
+      <li class="card lift reveal"><span class="step">Step 1</span><h3>Download the installer</h3><p class="muted">Remindr-Installer.exe from GitHub Releases.</p></li>
+      <li class="card lift reveal"><span class="step">Step 2</span><h3>Run it</h3><p class="muted">If Windows says "Windows protected your PC", choose <em>More info</em>, then <em>Run anyway</em>. Remindr isn't code-signed yet.</p></li>
+      <li class="card lift reveal"><span class="step">Step 3</span><h3>Open from Start</h3><p class="muted">Search "Remindr" in the Start menu. Updates are offered in the app.</p></li>
+    </ol>
+    <details class="card reveal">
+      <summary>Verify your download (optional)</summary>
+      <p class="muted">Compare the result with <a href="https://github.com/Randomstufteam/Remindr/releases/latest/download/Remindr-Installer.exe.sha256">Remindr-Installer.exe.sha256</a>.</p>
+      <div class="cmd"><pre><code id="hash-cmd">Get-FileHash .\Remindr-Installer.exe -Algorithm SHA256</code></pre><button type="button" id="copy-btn" class="pill" aria-live="polite">Copy</button></div>
+    </details>
   </section>
 
-  <section id="next" class="band reveal">
-    <h2>Coming next</h2>
-    <p class="muted">Recurring reminders, quick add, search and an optional offline AI assistant.</p>
+  <section class="wrap section-tight">
+    <div class="next reveal">
+      <h2>Coming next</h2>
+      <ul><li>Recurring reminders</li><li>Quick add</li><li>Search</li></ul>
+      <a href="https://github.com/Randomstufteam/Remindr/issues">Suggest a feature</a>
+    </div>
   </section>
 </main>
+
 <footer><div class="wrap">
-  <a href="https://github.com/Randomstufteam/Remindr">GitHub</a>
-  <a href="https://github.com/Randomstufteam/Remindr/issues">Issues</a>
-  <a href="https://github.com/Randomstufteam/Remindr/blob/main/LICENSE">MIT License</a>
-  <p class="muted small">Pictures are <a href="https://github.com/microsoft/fluentui-emoji">Microsoft Fluent UI Emoji</a> (MIT). See the <a href="https://github.com/Randomstufteam/Remindr/blob/main/THIRD-PARTY-NOTICES.md">third-party notices</a>.</p>
+  <p class="muted small">Remindr &middot; MIT License &middot; Pictures are <a href="https://github.com/microsoft/fluentui-emoji">Microsoft Fluent UI Emoji</a> (MIT)</p>
+  <nav aria-label="Footer">
+    <a href="https://github.com/Randomstufteam/Remindr">GitHub</a>
+    <a href="https://github.com/Randomstufteam/Remindr/issues">Issues</a>
+    <a href="https://github.com/Randomstufteam/Remindr/blob/main/LICENSE">License</a>
+    <a href="https://github.com/Randomstufteam/Remindr/blob/main/THIRD-PARTY-NOTICES.md">Third-party notices</a>
+  </nav>
 </div></footer>
 <script src="script.js"></script>
 </body>

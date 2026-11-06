@@ -15,7 +15,9 @@
   var items = document.querySelectorAll('.reveal');
   function show(el) { el.classList.add('seen'); }
   // Everything at or above the bottom of the window shows, so a fast scroll or an anchor jump never leaves a section blank.
+  var header = document.querySelector('header.site');
   function sweep() {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 8);
     items.forEach(function (el) { if (el.getBoundingClientRect().top < window.innerHeight * 0.95) show(el); });
   }
   if ('IntersectionObserver' in window) {
